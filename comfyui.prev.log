@@ -1,0 +1,317 @@
+** ComfyUI startup time: 2024-04-26 13:11:58.231197
+[2024-04-26 13:11] ** Platform: Darwin
+[2024-04-26 13:11] ** Python version: 3.9.0 | packaged by conda-forge | (default, Nov 26 2020, 07:55:15) 
+[Clang 11.0.0 ]
+[2024-04-26 13:11] ** Python executable: /Users/1113529/miniforge3/bin/python
+[2024-04-26 13:11] ** Log path: /Users/1113529/projects/ComfyUI/comfyui.log
+[2024-04-26 13:11] 
+Prestartup times for custom nodes:
+[2024-04-26 13:11]    3.3 seconds: /Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager
+[2024-04-26 13:11] 
+Total VRAM 16384 MB, total RAM 16384 MB
+[2024-04-26 13:12] Set vram state to: SHARED
+[2024-04-26 13:12] Device: mps
+[2024-04-26 13:12] VAE dtype: torch.float32
+[2024-04-26 13:12] /Users/1113529/miniforge3/lib/python3.9/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: dlopen(/Users/1113529/miniforge3/lib/python3.9/site-packages/torchvision/image.so, 0x0006): Symbol not found: __ZN3c1017RegisterOperatorsD1Ev
+  Referenced from: <3F789787-FE38-3CE7-8599-064BDD0416EE> /Users/1113529/miniforge3/lib/python3.9/site-packages/torchvision/image.so
+  Expected in:     <5B060930-6A71-3C98-A456-D34B1C187A40> /Users/1113529/miniforge3/lib/python3.9/site-packages/torch/lib/libtorch_cpu.dylib
+  warn(f"Failed to load image Python extension: {e}")
+[2024-04-26 13:12] Using sub quadratic optimization for cross attention, if you have memory or speed issues try using: --use-split-cross-attention
+[2024-04-26 13:12] /Users/1113529/miniforge3/lib/python3.9/site-packages/transformers/utils/generic.py:311: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  torch.utils._pytree._register_pytree_node(
+[2024-04-26 13:12] Traceback (most recent call last):
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorboard/compat/__init__.py", line 42, in tf
+    from tensorboard.compat import notf  # noqa: F401
+ImportError: cannot import name 'notf' from 'tensorboard.compat' (/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorboard/compat/__init__.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/1113529/projects/ComfyUI/nodes.py", line 1864, in load_custom_node
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/1113529/projects/ComfyUI/comfy_extras/nodes_canny.py", line 7, in <module>
+    from kornia.filters import canny
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/kornia/__init__.py", line 8, in <module>
+    from . import augmentation, color, contrib, core, enhance, feature, io, losses, metrics, morphology, tracking, utils, x
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/kornia/x/__init__.py", line 2, in <module>
+    from .trainer import Trainer
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/kornia/x/trainer.py", line 11, in <module>
+    from accelerate import Accelerator
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/accelerate/__init__.py", line 3, in <module>
+    from .accelerator import Accelerator
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/accelerate/accelerator.py", line 41, in <module>
+    from .tracking import LOGGER_TYPE_TO_CLASS, GeneralTracker, filter_trackers
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/accelerate/tracking.py", line 43, in <module>
+    from torch.utils import tensorboard
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/torch/utils/tensorboard/__init__.py", line 12, in <module>
+    from .writer import FileWriter, SummaryWriter  # noqa: F401
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/torch/utils/tensorboard/writer.py", line 18, in <module>
+    from ._embedding import get_embedding_info, make_mat, make_sprite, make_tsv, write_pbtxt
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/torch/utils/tensorboard/_embedding.py", line 9, in <module>
+    _HAS_GFILE_JOIN = hasattr(tf.io.gfile, "join")
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorboard/lazy.py", line 65, in __getattr__
+    return getattr(load_once(self), attr_name)
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorboard/lazy.py", line 97, in wrapper
+    cache[arg] = f(arg)
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorboard/lazy.py", line 50, in load_once
+    module = load_fn()
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorboard/compat/__init__.py", line 45, in tf
+    import tensorflow
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorflow/__init__.py", line 455, in <module>
+    _ll.load_library(_plugin_dir)
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorflow/python/framework/load_library.py", line 151, in load_library
+    py_tf.TF_LoadLibrary(lib)
+tensorflow.python.framework.errors_impl.NotFoundError: dlopen(/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorflow-plugins/libmetal_plugin.dylib, 0x0006): symbol not found in flat namespace '__ZN10tensorflow8internal10LogMessage16VmoduleActivatedEPKci'
+
+[2024-04-26 13:12] Cannot import /Users/1113529/projects/ComfyUI/comfy_extras/nodes_canny.py module for custom nodes: dlopen(/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorflow-plugins/libmetal_plugin.dylib, 0x0006): symbol not found in flat namespace '__ZN10tensorflow8internal10LogMessage16VmoduleActivatedEPKci'
+[2024-04-26 13:12] ### Loading: ComfyUI-Manager (V2.23)
+[2024-04-26 13:12] ### ComfyUI Revision: 2145 [16eabdf7] | Released on '2024-04-25'
+[2024-04-26 13:12] 
+Import times for custom nodes:
+[2024-04-26 13:12]    0.0 seconds: /Users/1113529/projects/ComfyUI/custom_nodes/websocket_image_save.py
+[2024-04-26 13:12]    0.0 seconds: /Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus
+[2024-04-26 13:12]    0.4 seconds: /Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager
+[2024-04-26 13:12] 
+[2024-04-26 13:12] WARNING: some comfy_extras/ nodes did not import correctly. This may be because they are missing some dependencies.
+
+[2024-04-26 13:12] IMPORT FAILED: nodes_canny.py
+[2024-04-26 13:12] 
+This issue might be caused by new missing dependencies added the last time you updated ComfyUI.
+[2024-04-26 13:12] Please do a: pip install -r requirements.txt
+[2024-04-26 13:12] 
+[2024-04-26 13:12] Starting server
+
+[2024-04-26 13:12] To see the GUI go to: http://127.0.0.1:8188
+[2024-04-26 13:12] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[2024-04-26 13:12] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[2024-04-26 13:12] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2024-04-26 13:12] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[2024-04-26 13:13] FETCH DATA from: /Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/extension-node-map.json
+[2024-04-26 13:21] got prompt
+[2024-04-26 13:21] Failed to validate prompt for output 9:
+[2024-04-26 13:21] * CheckpointLoaderSimple 4:
+[2024-04-26 13:21]   - Required input is missing: ckpt_name
+[2024-04-26 13:21] Output will be ignored
+[2024-04-26 13:21] invalid prompt: {'type': 'prompt_outputs_failed_validation', 'message': 'Prompt outputs failed validation', 'details': '', 'extra_info': {}}
+[2024-04-26 13:29] FETCH DATA from: /Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/4245046894_model-list.json
+[2024-04-26 13:48] got prompt
+[2024-04-26 13:48] model_type EPS
+[2024-04-26 13:48] Using split attention in VAE
+[2024-04-26 13:48] Using split attention in VAE
+[2024-04-26 13:48] clip missing: ['clip_l.logit_scale', 'clip_l.transformer.text_projection.weight']
+[2024-04-26 13:48] loaded straight to GPU
+[2024-04-26 13:48] Requested to load BaseModel
+[2024-04-26 13:48] Loading 1 new model
+[2024-04-26 13:48] download_path: /Users/1113529/projects/ComfyUI/models/insightface/models/buffalo_l
+[2024-04-26 13:48] Downloading /Users/1113529/projects/ComfyUI/models/insightface/models/buffalo_l.zip from https://github.com/deepinsight/insightface/releases/download/v0.7/buffalo_l.zip...
+[2024-04-26 13:50] 100%|████████████████████████████████▊| 280473/281857 [01:21<00:00, 3720.73KB/s]100%|████████████████████████████████▉| 280945/281857 [01:21<00:00, 3942.01KB/s]100%|████████████████████████████████▉| 281361/281857 [01:21<00:00, 3994.36KB/s]100%|████████████████████████████████▉| 281841/281857 [01:21<00:00, 4211.77KB/s]100%|█████████████████████████████████| 281857/281857 [01:21<00:00, 3439.14KB/s]
+[2024-04-26 13:50] Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+[2024-04-26 13:50] find model: /Users/1113529/projects/ComfyUI/models/insightface/models/buffalo_l/1k3d68.onnx landmark_3d_68 ['None', 3, 192, 192] 0.0 1.0
+[2024-04-26 13:50] Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+[2024-04-26 13:50] find model: /Users/1113529/projects/ComfyUI/models/insightface/models/buffalo_l/2d106det.onnx landmark_2d_106 ['None', 3, 192, 192] 0.0 1.0
+[2024-04-26 13:50] Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+[2024-04-26 13:50] find model: /Users/1113529/projects/ComfyUI/models/insightface/models/buffalo_l/det_10g.onnx detection [1, 3, '?', '?'] 127.5 128.0
+[2024-04-26 13:50] Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+[2024-04-26 13:50] find model: /Users/1113529/projects/ComfyUI/models/insightface/models/buffalo_l/genderage.onnx genderage ['None', 3, 96, 96] 0.0 1.0
+[2024-04-26 13:50] Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+[2024-04-26 13:50] find model: /Users/1113529/projects/ComfyUI/models/insightface/models/buffalo_l/w600k_r50.onnx recognition ['None', 3, 112, 112] 127.5 127.5
+[2024-04-26 13:50] set det-size: (640, 640)
+[2024-04-26 13:50] !!! Exception during processing!!! Missing CLIPVision model.
+[2024-04-26 13:50] Traceback (most recent call last):
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 151, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 81, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 74, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus/IPAdapterPlus.py", line 647, in apply_ipadapter
+    raise Exception("Missing CLIPVision model.")
+Exception: Missing CLIPVision model.
+
+[2024-04-26 13:50] Prompt executed in 99.86 seconds
+[2024-04-26 13:50] got prompt
+[2024-04-26 13:50] model_type EPS
+[2024-04-26 13:50] Using split attention in VAE
+[2024-04-26 13:50] Using split attention in VAE
+[2024-04-26 13:50] clip missing: ['clip_l.logit_scale', 'clip_l.transformer.text_projection.weight']
+[2024-04-26 13:50] !!! Exception during processing!!! Missing CLIPVision model.
+[2024-04-26 13:50] Traceback (most recent call last):
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 151, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 81, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 74, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus/IPAdapterPlus.py", line 647, in apply_ipadapter
+    raise Exception("Missing CLIPVision model.")
+Exception: Missing CLIPVision model.
+
+[2024-04-26 13:50] Prompt executed in 4.95 seconds
+[2024-04-26 13:52] FETCH DATA from: /Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/4245046894_model-list.json
+[2024-04-26 13:53] Install model 'CLIPVision model (IP-Adapter) CLIP-ViT-H-14-laion2B-s32B-b79K' into '/Users/1113529/projects/ComfyUI/models/clip_vision/CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors'
+[2024-04-26 13:53] Download error: https://huggingface.co/h94/IP-Adapter/resolve/main/models/image_encoder/model.safetensors / signed integer is greater than maximum
+[2024-04-26 13:53] FETCH DATA from: /Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/4245046894_model-list.json
+[2024-04-26 13:53] FETCH DATA from: /Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/4245046894_model-list.json
+[2024-04-26 13:55] FETCH DATA from: /Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/4245046894_model-list.json
+[2024-04-26 14:00] got prompt
+[2024-04-26 14:00] !!! Exception during processing!!! Missing CLIPVision model.
+[2024-04-26 14:00] Traceback (most recent call last):
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 151, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 81, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 74, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus/IPAdapterPlus.py", line 647, in apply_ipadapter
+    raise Exception("Missing CLIPVision model.")
+Exception: Missing CLIPVision model.
+
+[2024-04-26 14:00] Prompt executed in 0.21 seconds
+[2024-04-26 14:00] got prompt
+[2024-04-26 14:00] !!! Exception during processing!!! Missing CLIPVision model.
+[2024-04-26 14:00] Traceback (most recent call last):
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 151, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 81, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 74, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus/IPAdapterPlus.py", line 647, in apply_ipadapter
+    raise Exception("Missing CLIPVision model.")
+Exception: Missing CLIPVision model.
+
+[2024-04-26 14:00] Prompt executed in 1.27 seconds
+[2024-04-26 14:01] got prompt
+[2024-04-26 14:01] !!! Exception during processing!!! Missing CLIPVision model.
+[2024-04-26 14:01] Traceback (most recent call last):
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 151, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 81, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 74, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus/IPAdapterPlus.py", line 647, in apply_ipadapter
+    raise Exception("Missing CLIPVision model.")
+Exception: Missing CLIPVision model.
+
+[2024-04-26 14:01] Prompt executed in 0.16 seconds
+[2024-04-26 14:08] got prompt
+[2024-04-26 14:08] Failed to validate prompt for output 9:
+[2024-04-26 14:08] * IPAdapter 22:
+[2024-04-26 14:08]   - Required input is missing: ipadapter
+[2024-04-26 14:08] Output will be ignored
+[2024-04-26 14:08] Failed to validate prompt for output 18:
+[2024-04-26 14:08] Output will be ignored
+[2024-04-26 14:08] invalid prompt: {'type': 'prompt_outputs_failed_validation', 'message': 'Prompt outputs failed validation', 'details': '', 'extra_info': {}}
+[2024-04-26 14:08] got prompt
+[2024-04-26 14:08] !!! Exception during processing!!! IPAdapter model not present in the pipeline. Please load the models with the IPAdapterUnifiedLoader node.
+[2024-04-26 14:08] Traceback (most recent call last):
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 151, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 81, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 74, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus/IPAdapterPlus.py", line 602, in apply_ipadapter
+    raise Exception("IPAdapter model not present in the pipeline. Please load the models with the IPAdapterUnifiedLoader node.")
+Exception: IPAdapter model not present in the pipeline. Please load the models with the IPAdapterUnifiedLoader node.
+
+[2024-04-26 14:08] Prompt executed in 0.24 seconds
+[2024-04-26 14:08] got prompt
+[2024-04-26 14:08] !!! Exception during processing!!! IPAdapter model not present in the pipeline. Please load the models with the IPAdapterUnifiedLoader node.
+[2024-04-26 14:08] Traceback (most recent call last):
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 151, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 81, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 74, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus/IPAdapterPlus.py", line 602, in apply_ipadapter
+    raise Exception("IPAdapter model not present in the pipeline. Please load the models with the IPAdapterUnifiedLoader node.")
+Exception: IPAdapter model not present in the pipeline. Please load the models with the IPAdapterUnifiedLoader node.
+
+[2024-04-26 14:08] Prompt executed in 0.15 seconds
+[2024-04-26 14:09] FETCH DATA from: /Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2024-04-26 14:09] FETCH DATA from: /Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+[2024-04-26 14:09] got prompt
+[2024-04-26 14:09] !!! Exception during processing!!! IPAdapter model not present in the pipeline. Please load the models with the IPAdapterUnifiedLoader node.
+[2024-04-26 14:09] Traceback (most recent call last):
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 151, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 81, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 74, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus/IPAdapterPlus.py", line 602, in apply_ipadapter
+    raise Exception("IPAdapter model not present in the pipeline. Please load the models with the IPAdapterUnifiedLoader node.")
+Exception: IPAdapter model not present in the pipeline. Please load the models with the IPAdapterUnifiedLoader node.
+
+[2024-04-26 14:09] Prompt executed in 0.16 seconds
+[2024-04-26 14:10] got prompt
+[2024-04-26 14:10] Failed to validate prompt for output 9:
+[2024-04-26 14:10] * IPAdapterUnifiedLoader 24:
+[2024-04-26 14:10]   - Required input is missing: model
+[2024-04-26 14:10] Output will be ignored
+[2024-04-26 14:10] Failed to validate prompt for output 18:
+[2024-04-26 14:10] Output will be ignored
+[2024-04-26 14:10] invalid prompt: {'type': 'prompt_outputs_failed_validation', 'message': 'Prompt outputs failed validation', 'details': '', 'extra_info': {}}
+[2024-04-26 14:47] got prompt
+[2024-04-26 14:48] !!! Exception during processing!!! Missing CLIPVision model.
+[2024-04-26 14:48] Traceback (most recent call last):
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 151, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 81, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 74, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus/IPAdapterPlus.py", line 647, in apply_ipadapter
+    raise Exception("Missing CLIPVision model.")
+Exception: Missing CLIPVision model.
+
+[2024-04-26 14:48] Prompt executed in 0.40 seconds
+[2024-04-26 14:48] got prompt
+[2024-04-26 14:48] !!! Exception during processing!!! Missing CLIPVision model.
+[2024-04-26 14:48] Traceback (most recent call last):
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 151, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 81, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 74, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus/IPAdapterPlus.py", line 647, in apply_ipadapter
+    raise Exception("Missing CLIPVision model.")
+Exception: Missing CLIPVision model.
+
+[2024-04-26 14:48] Prompt executed in 0.20 seconds
+[2024-04-26 14:48] got prompt
+[2024-04-26 14:48] !!! Exception during processing!!! Missing CLIPVision model.
+[2024-04-26 14:48] Traceback (most recent call last):
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 151, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 81, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 74, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus/IPAdapterPlus.py", line 647, in apply_ipadapter
+    raise Exception("Missing CLIPVision model.")
+Exception: Missing CLIPVision model.
+
+[2024-04-26 14:48] Prompt executed in 0.39 seconds
+[2024-04-26 14:48] got prompt
+[2024-04-26 14:48] !!! Exception during processing!!! Missing CLIPVision model.
+[2024-04-26 14:48] Traceback (most recent call last):
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 151, in recursive_execute
+    output_data, output_ui = get_output_data(obj, input_data_all)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 81, in get_output_data
+    return_values = map_node_over_list(obj, input_data_all, obj.FUNCTION, allow_interrupt=True)
+  File "/Users/1113529/projects/ComfyUI/execution.py", line 74, in map_node_over_list
+    results.append(getattr(obj, func)(**slice_dict(input_data_all, i)))
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus/IPAdapterPlus.py", line 647, in apply_ipadapter
+    raise Exception("Missing CLIPVision model.")
+Exception: Missing CLIPVision model.
+
+[2024-04-26 14:48] Prompt executed in 0.15 seconds
+[2024-04-26 14:49] 
+Stopped server

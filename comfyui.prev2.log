@@ -1,0 +1,175 @@
+** ComfyUI startup time: 2024-04-26 13:05:47.555104
+[2024-04-26 13:05] ** Platform: Darwin
+[2024-04-26 13:05] ** Python version: 3.9.0 | packaged by conda-forge | (default, Nov 26 2020, 07:55:15) 
+[Clang 11.0.0 ]
+[2024-04-26 13:05] ** Python executable: /Users/1113529/miniforge3/bin/python
+[2024-04-26 13:05] ** Log path: /Users/1113529/projects/ComfyUI/comfyui.log
+[2024-04-26 13:05] 
+#######################################################################
+[2024-04-26 13:05] [ComfyUI-Manager] Starting dependency installation/(de)activation for the extension
+[2024-04-26 13:05] 
+[2024-04-26 13:05] Install: pip packages for '/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager'
+[2024-04-26 13:05]     Collecting PyGithub
+[2024-04-26 13:05]    Downloading PyGithub-2.3.0-py3-none-any.whl (354 kB)
+[2024-04-26 13:05]       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 354.4/354.4 kB 3.9 MB/s eta 0:00:00
+[2024-04-26 13:05]  Collecting pyjwt[crypto]>=2.4.0
+[2024-04-26 13:05]    Downloading PyJWT-2.8.0-py3-none-any.whl (22 kB)
+[2024-04-26 13:05]  Collecting pynacl>=1.4.0
+[2024-04-26 13:05]    Downloading PyNaCl-1.5.0-cp36-abi3-macosx_10_10_universal2.whl (349 kB)
+[2024-04-26 13:05]       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 349.9/349.9 kB 5.1 MB/s eta 0:00:00
+[2024-04-26 13:05]             Installing collected packages: pyjwt, pynacl, PyGithub
+[2024-04-26 13:05]  Successfully installed PyGithub-2.3.0 pyjwt-2.8.0 pynacl-1.5.0
+[2024-04-26 13:05]  Collecting matrix-client==0.4.0
+[2024-04-26 13:05]    Downloading matrix_client-0.4.0-py2.py3-none-any.whl (43 kB)
+[2024-04-26 13:05]       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.5/43.5 kB 755.0 kB/s eta 0:00:00
+[2024-04-26 13:05]       Installing collected packages: matrix-client
+[2024-04-26 13:06]  Successfully installed matrix-client-0.4.0
+[2024-04-26 13:06] 
+[ComfyUI-Manager] Startup script completed.
+[2024-04-26 13:06] #######################################################################
+[2024-04-26 13:06] 
+[2024-04-26 13:06] 
+Prestartup times for custom nodes:
+[2024-04-26 13:06]   15.4 seconds: /Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager
+[2024-04-26 13:06] 
+Total VRAM 16384 MB, total RAM 16384 MB
+[2024-04-26 13:06] Set vram state to: SHARED
+[2024-04-26 13:06] Device: mps
+[2024-04-26 13:06] VAE dtype: torch.float32
+[2024-04-26 13:06] /Users/1113529/miniforge3/lib/python3.9/site-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: dlopen(/Users/1113529/miniforge3/lib/python3.9/site-packages/torchvision/image.so, 0x0006): Symbol not found: __ZN3c1017RegisterOperatorsD1Ev
+  Referenced from: <3F789787-FE38-3CE7-8599-064BDD0416EE> /Users/1113529/miniforge3/lib/python3.9/site-packages/torchvision/image.so
+  Expected in:     <5B060930-6A71-3C98-A456-D34B1C187A40> /Users/1113529/miniforge3/lib/python3.9/site-packages/torch/lib/libtorch_cpu.dylib
+  warn(f"Failed to load image Python extension: {e}")
+[2024-04-26 13:06] Using sub quadratic optimization for cross attention, if you have memory or speed issues try using: --use-split-cross-attention
+[2024-04-26 13:06] /Users/1113529/miniforge3/lib/python3.9/site-packages/transformers/utils/generic.py:311: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  torch.utils._pytree._register_pytree_node(
+[2024-04-26 13:06] Traceback (most recent call last):
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorboard/compat/__init__.py", line 42, in tf
+    from tensorboard.compat import notf  # noqa: F401
+ImportError: cannot import name 'notf' from 'tensorboard.compat' (/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorboard/compat/__init__.py)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/1113529/projects/ComfyUI/nodes.py", line 1864, in load_custom_node
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 790, in exec_module
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/Users/1113529/projects/ComfyUI/comfy_extras/nodes_canny.py", line 7, in <module>
+    from kornia.filters import canny
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/kornia/__init__.py", line 8, in <module>
+    from . import augmentation, color, contrib, core, enhance, feature, io, losses, metrics, morphology, tracking, utils, x
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/kornia/x/__init__.py", line 2, in <module>
+    from .trainer import Trainer
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/kornia/x/trainer.py", line 11, in <module>
+    from accelerate import Accelerator
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/accelerate/__init__.py", line 3, in <module>
+    from .accelerator import Accelerator
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/accelerate/accelerator.py", line 41, in <module>
+    from .tracking import LOGGER_TYPE_TO_CLASS, GeneralTracker, filter_trackers
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/accelerate/tracking.py", line 43, in <module>
+    from torch.utils import tensorboard
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/torch/utils/tensorboard/__init__.py", line 12, in <module>
+    from .writer import FileWriter, SummaryWriter  # noqa: F401
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/torch/utils/tensorboard/writer.py", line 18, in <module>
+    from ._embedding import get_embedding_info, make_mat, make_sprite, make_tsv, write_pbtxt
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/torch/utils/tensorboard/_embedding.py", line 9, in <module>
+    _HAS_GFILE_JOIN = hasattr(tf.io.gfile, "join")
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorboard/lazy.py", line 65, in __getattr__
+    return getattr(load_once(self), attr_name)
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorboard/lazy.py", line 97, in wrapper
+    cache[arg] = f(arg)
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorboard/lazy.py", line 50, in load_once
+    module = load_fn()
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorboard/compat/__init__.py", line 45, in tf
+    import tensorflow
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorflow/__init__.py", line 455, in <module>
+    _ll.load_library(_plugin_dir)
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorflow/python/framework/load_library.py", line 151, in load_library
+    py_tf.TF_LoadLibrary(lib)
+tensorflow.python.framework.errors_impl.NotFoundError: dlopen(/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorflow-plugins/libmetal_plugin.dylib, 0x0006): symbol not found in flat namespace '__ZN10tensorflow8internal10LogMessage16VmoduleActivatedEPKci'
+
+[2024-04-26 13:06] Cannot import /Users/1113529/projects/ComfyUI/comfy_extras/nodes_canny.py module for custom nodes: dlopen(/Users/1113529/miniforge3/lib/python3.9/site-packages/tensorflow-plugins/libmetal_plugin.dylib, 0x0006): symbol not found in flat namespace '__ZN10tensorflow8internal10LogMessage16VmoduleActivatedEPKci'
+[2024-04-26 13:06] ### Loading: ComfyUI-Manager (V2.23)
+[2024-04-26 13:06] ### ComfyUI Revision: 2145 [16eabdf7] | Released on '2024-04-25'
+[2024-04-26 13:06] 
+Import times for custom nodes:
+[2024-04-26 13:06]    0.0 seconds: /Users/1113529/projects/ComfyUI/custom_nodes/websocket_image_save.py
+[2024-04-26 13:06]    0.0 seconds: /Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI_IPAdapter_plus
+[2024-04-26 13:06]    0.2 seconds: /Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager
+[2024-04-26 13:06] 
+[2024-04-26 13:06] WARNING: some comfy_extras/ nodes did not import correctly. This may be because they are missing some dependencies.
+
+[2024-04-26 13:06] IMPORT FAILED: nodes_canny.py
+[2024-04-26 13:06] 
+This issue might be caused by new missing dependencies added the last time you updated ComfyUI.
+[2024-04-26 13:06] Please do a: pip install -r requirements.txt
+[2024-04-26 13:06] 
+[2024-04-26 13:06] Starting server
+
+[2024-04-26 13:06] To see the GUI go to: http://127.0.0.1:8188
+[2024-04-26 13:06] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/alter-list.json
+[2024-04-26 13:06] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/model-list.json
+[2024-04-26 13:06] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/extension-node-map.json
+[2024-04-26 13:06] [ComfyUI-Manager] default cache updated: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2024-04-26 13:09] FETCH DATA from: /Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json
+[2024-04-26 13:09] FETCH DATA from: /Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1742899825_extension-node-map.json
+[2024-04-26 13:09] Update custom node 'ComfyUI-Manager'
+[2024-04-26 13:09] Disable: ['https://github.com/ltdrdata/ComfyUI-Manager']
+[2024-04-26 13:09] Disable was successful.
+[2024-04-26 13:09] FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2024-04-26 13:09] [ComfyUI-Manager] Due to a network error, switching to local mode.
+=> custom-node-list.json
+=> [Errno 2] No such file or directory: '/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json'
+[2024-04-26 13:09] FETCH DATA from: /Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/custom-node-list.json
+[2024-04-26 13:09] Error handling request
+Traceback (most recent call last):
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/glob/manager_core.py", line 620, in get_data_by_mode
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/aiohttp/web_protocol.py", line 433, in _handle_request
+    resp = await request_handler(request)
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/aiohttp/web_app.py", line 504, in _handle
+    resp = await handler(request)
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/aiohttp/web_middlewares.py", line 117, in impl
+    return await handler(request)
+  File "/Users/1113529/projects/ComfyUI/server.py", line 41, in cache_control
+    response: web.Response = await handler(request)
+  File "/Users/1113529/projects/ComfyUI/server.py", line 53, in cors_middleware
+    response = await handler(request)
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/glob/manager_server.py", line 441, in fetch_customnode_list
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/glob/manager_core.py", line 630, in get_data_by_mode
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/glob/manager_core.py", line 574, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/custom-node-list.json'
+[2024-04-26 13:09] FETCH DATA from: https://raw.githubusercontent.com/ltdrdata/ComfyUI-Manager/main/custom-node-list.json
+[2024-04-26 13:09] [ComfyUI-Manager] Due to a network error, switching to local mode.
+=> custom-node-list.json
+=> [Errno 2] No such file or directory: '/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json'
+[2024-04-26 13:09] FETCH DATA from: /Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/custom-node-list.json
+[2024-04-26 13:09] Error handling request
+Traceback (most recent call last):
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/glob/manager_core.py", line 620, in get_data_by_mode
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/.cache/1514988643_custom-node-list.json'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/aiohttp/web_protocol.py", line 433, in _handle_request
+    resp = await request_handler(request)
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/aiohttp/web_app.py", line 504, in _handle
+    resp = await handler(request)
+  File "/Users/1113529/miniforge3/lib/python3.9/site-packages/aiohttp/web_middlewares.py", line 117, in impl
+    return await handler(request)
+  File "/Users/1113529/projects/ComfyUI/server.py", line 41, in cache_control
+    response: web.Response = await handler(request)
+  File "/Users/1113529/projects/ComfyUI/server.py", line 53, in cors_middleware
+    response = await handler(request)
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/glob/manager_server.py", line 441, in fetch_customnode_list
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/glob/manager_core.py", line 630, in get_data_by_mode
+  File "/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/glob/manager_core.py", line 574, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/1113529/projects/ComfyUI/custom_nodes/ComfyUI-Manager/custom-node-list.json'
+[2024-04-26 13:11] 
+Stopped server
